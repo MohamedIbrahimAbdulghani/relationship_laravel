@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\phone;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,11 @@ class UserController extends Controller
         // return $phone->user;
 
 
-        $user = User::find(1);
-        return $user->roles;
+        // $user = User::find(1);
+        // return $user->roles;
+
+
+        $role = Role::find(2);
+        return $role->user;
     }
 }
