@@ -10,6 +10,7 @@ class phone extends Model
 {
     use HasFactory;
     public function user() {
+        // this is to show user throw phone  // relationship about ( one to one)
         return $this->belongsTo(User::class);
     }
 }

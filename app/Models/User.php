@@ -44,6 +44,7 @@ class User extends Authenticatable
 
     // this is function to know this "the user has one phone " to make the relationship ' one to one '
     public function phone() {
+        // this is to show phone throw user  // relationship about ( one to one)
         return $this->hasOne(phone::class);
     }
 }
