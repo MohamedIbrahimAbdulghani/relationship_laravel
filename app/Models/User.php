@@ -47,4 +47,8 @@ class User extends Authenticatable
         // this is to show phone throw user  // relationship about ( one to one)
         return $this->hasOne(phone::class);
     }
+
+    public function roles() {
+        return $this->belongsToMany(Role::class, "role_user_privat");
+    }
 }
